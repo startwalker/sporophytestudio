@@ -110,6 +110,12 @@ function linkArc(d) {
 container.append(svg.node());
 
 </script>
-# Welcome to my biology notes
+<style>
+.title {
+  color: Green
+}
+</style>
+<h1>Welcome to <span class="title">Sporophyte Studio</span></h1>
+Sporophyte studio aims to teach general biology lessons for the students who are struggling in understanding biological concepts.
 
 <div id="container"></div>
