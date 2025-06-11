@@ -3,6 +3,7 @@ nav:
     - Home: index.md
     - IG: 
         - 'Chapter 9 Transport in animals': ./IG/transport_in_animals.md
+        - 'Vocabulary': ./vocabulary.md
 theme: material
 markdown_extensions:
   - pymdownx.superfences:
