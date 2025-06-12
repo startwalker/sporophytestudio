@@ -2,7 +2,7 @@
 
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-// Declare the chart dimensions and margins.
+// // Declare the chart dimensions and margins.
 const width = 1024;
 const height = 800;
 const marginTop = 20;
@@ -11,6 +11,7 @@ const marginBottom = 30;
 const marginLeft = 40;
 
 const data = [
+    // Glycolysis
     {
         source: "glucose(6C)",
         target: "fructose 1,6-bisphosphate"
@@ -19,7 +20,50 @@ const data = [
         source: "fructose 1,6-bisphosphate",
         target: "pyruvate(3C)"
     },
-]
+    // Link reaction
+    {
+        source: "pyruvate(3C)",
+        target: "acetyl-CoA(2C)"
+    },
+    // Citric Acid Cycle (Krebs Cycle)
+    {
+        source: "acetyl-CoA(2C)",
+        target: "citrate(6C)"
+    },
+    {
+        source: "citrate(6C)",
+        target: "isocitrate(6C)"
+    },
+    {
+        source: "isocitrate(6C)",
+        target: "α-ketoglutarate(5C)"
+    },
+    {
+        source: "α-ketoglutarate(5C)",
+        target: "succinyl-CoA(4C)"
+    },
+    {
+        source: "succinyl-CoA(4C)",
+        target: "succinate(4C)"
+    },
+    {
+        source: "succinate(4C)",
+        target: "fumarate(4C)"
+    },
+    {
+        source: "fumarate(4C)",
+        target: "malate(4C)"
+    },
+    {
+        source: "malate(4C)",
+        target: "oxaloacetate(4C)"
+    },
+    {
+        source: "oxaloacetate(4C)",
+        target: "citrate(6C)" // Cycle continues
+    }
+];
+
 
 const nodes = Array.from(new Set(data.flatMap(d => [d.source, d.target])), id => ({id}));
 const links = data.map(d => Object.create(d));
@@ -116,6 +160,6 @@ container.append(svg.node());
 }
 </style>
 <h1>Welcome to <span class="title">Sporophyte Studio</span></h1>
-Sporophyte studio aims to teach general biology lessons for the students who are struggling in understanding biological concepts.
+Sporophyte Studio aims to teach general biology lessons to students struggling to understand biological concepts.
 
 <div id="container"></div>

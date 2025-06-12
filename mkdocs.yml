@@ -4,6 +4,7 @@ nav:
     - IG: 
         - 'Chapter 9 Transport in animals': ./IG/transport_in_animals.md
         - 'Vocabulary': ./IG/vocabulary.md
+    - Mastering Science: ./mastering_science/mastering_science.md
 theme: material
 markdown_extensions:
   - pymdownx.superfences:
