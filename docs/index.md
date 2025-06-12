@@ -1,6 +1,9 @@
+<script src="./myscripts/d3.v7.js" ></script>
+
 <script type="module">
 
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+// import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+
 
 // // Declare the chart dimensions and margins.
 const width = 1024;
