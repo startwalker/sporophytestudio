@@ -101,7 +101,7 @@ const svg = d3.create("svg")
 
 const simulation = d3.forceSimulation(nodes)
       .force("link", d3.forceLink(links).id(d => d.id))
-      .force("charge", d3.forceManyBody().strength(-400))
+      .force("charge", d3.forceManyBody().strength(-800))
       .force("x", d3.forceX())
       .force("y", d3.forceY());
 
@@ -117,10 +117,10 @@ const node = svg.append("g")
   node.append("circle")
       .attr("stroke", "white")
       .attr("stroke-width", 1.5)
-      .attr("r", 8);
+      .attr("r", 12);
 
   node.append("text")
-      .attr("x", 8)
+      .attr("x", 10)
       .attr("y", "0.31em")
       .text(d => d.id)
     .clone(true).lower()
@@ -134,7 +134,7 @@ const link = svg.append("g")
     .selectAll("path")
     .data(links)
     .join("path")
-      .attr("stroke", "blue")
+      .attr("stroke", "gray")
       .attr("marker-end", d => `url(#${d.source})`);
 
 simulation.on("tick", () => {
