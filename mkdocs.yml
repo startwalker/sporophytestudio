@@ -5,7 +5,10 @@ nav:
         - 'Chapter 9 Transport in animals': ./IG/transport_in_animals.md
         - 'Vocabulary': ./IG/vocabulary.md
     - Mastering Science: ./mastering_science/mastering_science.md
-    - Atom: ./data_display/atoms.md
+    - Chemistry: 
+        - Atom: ./data_display/atoms.md
+    - Mindmap: 
+        - Cell: './mindmap/cell/cell.md'
 theme: material
 markdown_extensions:
   - pymdownx.superfences:
